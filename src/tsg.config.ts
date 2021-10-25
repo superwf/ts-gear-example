@@ -11,7 +11,7 @@ const projects: Project[] = [
      * will used to mkdir in "dest"
      * 工程名，会在dest指定的文件夹中生成对应的工程名文件夹
      * */
-    name: 'pet',
+    name: 'petOpenapiV3',
 
     /**
      * the api files will be generated to
@@ -142,6 +142,13 @@ const projects: Project[] = [
      * @default '\n'
      * */
     // EOL?: '\n' | '\r' | '\r\n' | 'auto',
+  },
+
+  {
+    name: 'petOpenapiV2',
+    dest: 'service',
+    source: 'https://petstore.swagger.io/v2/swagger.json',
+    importRequesterStatement: 'import { requester } from "../../requester"',
   },
 ]
 

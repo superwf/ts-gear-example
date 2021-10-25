@@ -11,5 +11,6 @@ Initialized by Create React App.
 ```sh
 git clone https://github.com/superwf/ts-gear-example.git
 cd ts-gear-example
-yarn && yarn start
 ```
+
+check the code generated in `src/service`.
