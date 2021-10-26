@@ -1,0 +1,14 @@
+.openapi-generator-ignore
+apis/CreditQueryControllerApi.ts
+apis/index.ts
+index.ts
+models/     Vo .ts
+models/.ts
+models/Abc.ts
+models/DataTransOutput.ts
+models/DataTransOutputvo.ts
+models/ResultListMap.ts
+models/Tokenvo.ts
+models/Vo.ts
+models/index.ts
+runtime.ts

@@ -1,0 +1,122 @@
+{
+  "swagger": "2.0",
+  "info": { "contact": {}, "license": {} },
+  "basePath": "/",
+  "paths": {
+    "/api/databoard/board/es": {
+      "delete": {
+        "tags": ["Es"],
+        "summary": "删除索引",
+        "operationId": "delIndexUsingDELETE",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "indexNames",
+            "description": "索引数组",
+            "required": false,
+            "schema": { "type": "array", "items": { "type": "string" } }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ReplyVO«int»" }
+          },
+          "204": { "description": "No Content" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" }
+        },
+        "security": [{ "Authorization": ["global"] }],
+        "deprecated": false
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": { "type": "apiKey", "name": "TOKEN", "in": "header" }
+  },
+  "definitions": {
+    "BodyBuilder": { "type": "object", "title": "BodyBuilder" },
+    "PageVO«ListVO»": {
+      "type": "object",
+      "required": [
+        "entities",
+        "entityCount",
+        "firstEntityIndex",
+        "lastEntityIndex",
+        "pageCount",
+        "pageNo",
+        "pageSize"
+      ],
+      "properties": {
+        "entities": {
+          "type": "array",
+          "description": "数据列表",
+          "items": {
+            "originalRef": "ListVO",
+            "$ref": "#/definitions/ListVO"
+          }
+        },
+        "entityCount": {
+          "type": "integer",
+          "format": "int32",
+          "example": 100,
+          "description": "总条数"
+        },
+        "firstEntityIndex": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "开始序号"
+        },
+        "lastEntityIndex": {
+          "type": "integer",
+          "format": "int32",
+          "example": 10,
+          "description": "结束序号"
+        },
+        "pageCount": {
+          "type": "integer",
+          "format": "int32",
+          "example": 10,
+          "description": "总页数"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "example": 1,
+          "description": "页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "example": 10,
+          "description": "每页条数"
+        }
+      },
+      "title": "PageVO«ListVO»"
+    },
+    "ReplyVO«PageVO«FollowRecordVO»»": {
+      "type": "object",
+      "required": ["code", "message"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "000000",
+          "description": "响应代码【0正确,非0错误】"
+        },
+        "data": {
+          "description": "返回数据",
+          "$ref": "#/definitions/PageVO«FollowRecordVO»",
+          "originalRef": "PageVO«FollowRecordVO»"
+        },
+        "message": {
+          "type": "string",
+          "example": "success",
+          "description": "结果描述"
+        }
+      },
+      "title": "ReplyVO«PageVO«FollowRecordVO»»"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "outDir": "./src/service/pont",
+  "templatePath": "./pontTemplate",
+  "usingMultipleOrigins": true,
+  "origins": [
+    {
+      "name": "petV2",
+      "originUrl": "https://petstore.swagger.io/v2/swagger.json"
+    },
+    {
+      "name": "petV3",
+      "originUrl": "https://petstore3.swagger.io/api/v3/openapi.json"
+    }
+  ]
+}
