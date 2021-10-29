@@ -10,6 +10,18 @@
     {
       "name": "petV3",
       "originUrl": "https://petstore3.swagger.io/api/v3/openapi.json"
+    },
+    {
+      "name": "badDefined1",
+      "originUrl": "https://raw.githubusercontent.com/superwf/ts-gear-example/master/fixture/badDefined1.json"
+    },
+    {
+      "name": "badDefined2",
+      "originUrl": "https://raw.githubusercontent.com/superwf/ts-gear-example/master/fixture/badDefined2.json"
+    },
+    {
+      "name": "badDefined3",
+      "originUrl": "https://raw.githubusercontent.com/superwf/ts-gear-example/master/fixture/badDefined3.json"
     }
   ]
 }

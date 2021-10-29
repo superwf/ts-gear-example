@@ -33,10 +33,10 @@ const projects: Project[] = [
     importRequesterStatement,
   },
   {
-    name: 'tsGearPontSample',
+    name: 'tsGearBadDefined3',
     dest: 'service',
-    source: '../fixture/pont.json',
-    translationEngine: 'google',
+    source: '../fixture/badDefined3.json',
+    translationEngine: 'baidu',
     importRequesterStatement,
   },
 ]

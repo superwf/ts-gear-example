@@ -27,7 +27,23 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "openapiGeneratorPetV2": "openapi-generator-cli generate -i https://petstore.swagger.io/v2/swagger.json -g typescript-fetch -o ./src/service/openapiGeneratorPetV2",
+    "openapiGeneratorPetV3": "openapi-generator-cli generate -i https://petstore.swagger.io/v2/swagger.json -g typescript-fetch -o ./src/service/openapiGeneratorPetV2 && openapi-generator-cli generate -i https://petstore3.swagger.io/api/v3/openapi.json -g typescript-fetch -o ./src/service/openapiGeneratorPetV3",
+    "openapiGeneratorPet": "openapi-generator-cli generate -i https://petstore.swagger.io/v2/swagger.json -g typescript-fetch -o ./src/service/openapiGeneratorPetV2 && openapi-generator-cli generate -i https://petstore3.swagger.io/api/v3/openapi.json -g typescript-fetch -o ./src/service/openapiGeneratorPetV3",
+    "openapiGeneratorBadDefined1": "openapi-generator-cli generate -i ./fixture/badDefined1.json -g typescript-fetch -o ./src/service/openapiGeneratorBadDefined1",
+    "openapiGeneratorBadDefined2": "openapi-generator-cli generate -i ./fixture/badDefined2.json -g typescript-fetch -o ./src/service/openapiGeneratorBadDefined2",
+    "openapiGeneratorBadDefined3": "openapi-generator-cli generate -i ./fixture/badDefined3.json -g typescript-fetch -o ./src/service/openapiGeneratorBadDefined3",
+    "swaggerCodegenPetV2": "sc generate -l typescript-fetch -i https://petstore.swagger.io/v2/swagger.json -o ./src/service/swaggerCodegenPetV2",
+    "swaggerCodegenPetV3": "sc generate -l typescript-fetch -i https://petstore3.swagger.io/api/v3/openapi.json -o ./src/service/swaggerCodegenPetV3",
+    "swaggerCodegenBadDefined1": "sc generate -l typescript-fetch -i ./fixture/badDefined1.json -o ./src/service/swaggerCodegenBadDefined1",
+    "swaggerCodegenBadDefined2": "sc generate -l typescript-fetch -i ./fixture/badDefined2.json -o ./src/service/swaggerCodegenBadDefined2",
+    "swaggerCodegenBadDefined3": "sc generate -l typescript-fetch -i ./fixture/badDefined3.json -o ./src/service/swaggerCodegenBadDefined3",
+    "oazapftsPetV2": "oazapfts https://petstore.swagger.io/v2/swagger.json src/service/oazapftsPetV2.ts",
+    "oazapftsPetV3": "oazapfts https://petstore3.swagger.io/api/v3/openapi.json src/service/oazapftsPetV3.ts",
+    "oazapftsBadDefined1": "oazapfts ./fixture/badDefined1.json src/service/oazapftsBadDefined1.ts",
+    "oazapftsBadDefined2": "oazapfts ./fixture/badDefined2.json src/service/oazapftsBadDefined2.ts",
+    "oazapftsBadDefined3": "oazapfts ./fixture/badDefined3.json src/service/oazapftsBadDefined3.ts"
   },
   "eslintConfig": {
     "plugins": [
