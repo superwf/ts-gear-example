@@ -6,15 +6,19 @@ import { defs as badDefined1Defs, badDefined1 } from './badDefined1';
 
 import { defs as badDefined2Defs, badDefined2 } from './badDefined2';
 
+import { defs as badDefined3Defs, badDefined3 } from './badDefined3';
+
 (window as any).defs = {
   petV2: petV2Defs,
   petV3: petV3Defs,
   badDefined1: badDefined1Defs,
   badDefined2: badDefined2Defs,
+  badDefined3: badDefined3Defs,
 };
 (window as any).API = {
   petV2,
   petV3,
   badDefined1,
   badDefined2,
+  badDefined3,
 };
