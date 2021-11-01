@@ -78,7 +78,7 @@ Fixture source: [https://petstore3.swagger.io/api/v3/openapi.json](https://petst
 
   - result position: `src/service/pont/petV3/`
 
-  😢 **No definition data type** generated.
+  😢 Run OK, but **No definition data type** generated.
 
 - ✅ `openapi-generator`
 
@@ -116,7 +116,7 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
   - ❌result position: `src/service/pont/badDefined1/`
 
-  😢 **No meaningful** code generated.
+  😢 Run OK, but **No meaningful** code generated.
 
 - ✅❌ `openapi-generator`
 
@@ -130,7 +130,7 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
   - result position: `src/service/openapiGeneratorBadDefined1/`
 
-  😢 Many data type definition missing.
+  😢 Run OK, but many data type definition missing.
 
 - ✅❌ `swagger-codegen`
 
@@ -138,7 +138,7 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
   - ❌ result position: `src/service/swaggerCodegenBadDefined1/`
 
-  😢 Many data type definition missing.
+  😢 Run OK, but many data type definition missing.
 
 - ❌ `oazapfts`
 
@@ -176,7 +176,7 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
   - result position: `src/service/openapiGeneratorBadDefined2/`
 
-  😢 Many data type definition missing.
+  😢 Run OK, but many data type definition missing.
 
 - ✅❌ `swagger-codegen`
 
@@ -214,7 +214,7 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
   - ❌ result: `src/service/openapiGeneratorBadDefined3/`
 
-  😢 Result code has syntax error, can not be used directly.
+  😢 Run OK, but result code has syntax error, can not be used directly.
 
 - ✅❌ `swagger-codegen`
 
@@ -222,7 +222,7 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
   - result position: `src/service/swaggerCodegenBadDefined3/`
 
-  😢 Result code has syntax error, can not be used directly.
+  😢 Run OK, but result code has syntax error, can not be used directly.
 
 - ❌ `oazapfts`
 
@@ -240,7 +240,11 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 | swagger-codegen | ❌ | ✅ | ✅<a href="#generic-type-👀">👀</a> | ❌ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ |
 | oazapfts | ❌ | ✅ | ✅<a href="#generic-type-👀">👀</a>| ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 
-Openapi-generator and Swagger-codegen are the most common industry general tools, they are powerfull for supportting many program languages and special env.
+- `Openapi-generator` and `Swagger-codegen` are the most common industry general tools, they are powerfull for supportting many program languages and special env.
+
+- Only `pont` and `ts-gear` use configuration file, all other tools just use cli arguments.
+
+- `ts-gear` prove its self the compatibility with bad defined openapi doc.
 
 ### Generic type 👀
 
