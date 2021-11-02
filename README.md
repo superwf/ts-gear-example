@@ -246,6 +246,10 @@ Fixture source: [https://raw.githubusercontent.com/superwf/ts-gear-example/maste
 
 - `ts-gear` prove its self the compatibility with bad defined openapi doc.
 
+  The compatibility of `ts-gear` is not infinite.
+
+  First the target openapi should be a valid json, and it should not be too ridiculous. 😑
+
 ### Generic type 👀
 
 Whether can generate generic type successfully, depends on the complement of openapi doc definition.
